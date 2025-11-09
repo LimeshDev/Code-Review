@@ -1,8 +1,6 @@
-import 'dotenv/config'; // dotenv ko ESM style me import
-import app from './src/app.js'; // `.js` extension ESM ke liye zaruri
+import 'dotenv/config';          // dotenv ESM style
+import app from './src/app.js';  // Express app
+import serverless from 'serverless-http'; 
 
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}/`);
-});
+// Export serverless handler instead of app.listen()
+export const handler = serverless(app);
