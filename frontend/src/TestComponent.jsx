@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { testAPI } from '../api.js';
+import { testAPI } from './api.js';  // same folder
 
 function TestComponent() {
   const [message, setMessage] = useState('');
