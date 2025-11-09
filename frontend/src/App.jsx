@@ -8,6 +8,7 @@ import rehypeHighlight from 'rehype-highlight';
 import prism from 'prismjs'
 
 import './App.css'
+import TestComponent from './TestComponent'
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
         </div>
 
       </main>
+      <TestComponent/>
 
     </>
   )
